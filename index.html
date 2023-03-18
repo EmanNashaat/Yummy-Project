@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="" href="images/logo.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Yummy Exam</title>
+</head>
+
+<body>
+    <div class="main container-fluid px-0 z-3">
+        <div id="menu" class="h-100 sideMenu z-3 bg-black position-fixed top-0  text-white px-4 d-flex flex-column justify-content-between py-4">
+            <div class=" h-50 ">
+                <ul class="list-unstyled position-relative w-100 overflow-hidden " id="menuList">
+                    <li class="my-3 position-absolute" id="searchBtn">Search</li>
+                    <li class="my-3 position-absolute" id="categoriesBtn">Categories</li>
+                    <li class="my-3 position-absolute" id="areaBtn">Area</li>
+                    <li class="my-3 position-absolute" id="ingredientsBtn">Ingredients</li>
+                    <li class="my-3 position-absolute" id="contactBtn">Contact Us</li>
+                </ul>
+            </div>
+            <div>
+                <div class="menuIcon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <span>Copyright Â© 2019 All Rights Reserved.</span>
+            </div>
+        </div>
+        <div id="menubar" class="sideMenubar z-3 bg-white position-fixed top-0 h-100 d-flex flex-column justify-content-between py-3 text-center text-black">
+            <div class="w-100 px-2">
+                <img src="images/logo.png" alt="" class="w-100">
+            </div>
+            <div>
+                <i class="fa-solid open-close-icon fa-align-justify fa-2x" id="openingIcon"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+<!-- main section -->
+    <div class="container py-5" id="mainScreen">
+        <div class="row gy-4" id="mainPage">
+        </div>
+    </div>
+
+<!-- search -->
+    <div class="container d-none" id="searchSection">
+        <div class="py-4 px-5" id="searchInputs" >
+            <input type="search" id="searchInputs1" placeholder="Search By Name" class=" text-white bg-transparent  py-2 px-3 rounded-2 ">
+            <input type="search" id="searchInputs2" placeholder="Search By First Letter" maxlength="1" class=" text-white ms-3 bg-transparent py-2 px-3 rounded-2 ">
+        </div>
+        <div class="row gy-2 my-5" id="searchScreen">
+           
+        </div>
+    </div>
+
+<!-- contact -->
+    <div class="container min-vh-100 w-100 d-flex justify-content-center align-items-center d-none" id="contactSection">
+        <div class=" row contact pt-5 gy-4"> 
+            <div class="col-md-6">
+                <input type="text" onkeyup="validation()" class="  py-2 px-3 rounded-2 border-0" placeholder="Enter Your Name" id="nameInput">
+                <div id="warningName" class="p-4 my-3 bg-danger-subtle text-danger-emphasis rounded-2 w-100 text-center d-none"></div>
+            </div>
+            <div class="col-md-6">
+                <input type="email" onkeyup="validation()" class=" col-md-6 py-2 px-3 rounded-2 border-0" placeholder="Enter Your Email" id="emailInput">
+                <div id="warningEmail" class="p-4 my-3 bg-danger-subtle text-danger-emphasis rounded-2 w-100 text-center d-none"></div>
+            </div>
+            <div class="col-md-6">
+                <input type="number" onkeyup="validation()" class=" col-md-6 py-2 px-3 rounded-2 border-0" placeholder="Enter Your Phone" id="phoneInput">
+                <div id="warningPhone" class="p-4 my-3 bg-danger-subtle text-danger-emphasis rounded-2 w-100 text-center d-none"></div>
+            </div>
+            <div class="col-md-6">
+                <input type="number" onkeyup="validation()" class=" col-md-6 py-2 px-3 rounded-2 border-0" placeholder="Enter Your Age" id="ageInput">
+                <div id="warningAge" class="p-4 my-3 bg-danger-subtle text-danger-emphasis rounded-2 w-100 text-center d-none"></div>
+            </div>
+            <div class="col-md-6">
+                <input type="password" onkeyup="validation()" class=" col-md-6 py-2 px-3 rounded-2 border-0" placeholder="Enter Your Password" id="passInput">
+                <div id="warningPass" class="p-4 my-3 bg-danger-subtle text-danger-emphasis rounded-2 w-100 text-center d-none"></div>
+            </div>
+            <div class="col-md-6">
+                <input type="password" onkeyup="validation()" class=" col-md-6 py-2 px-3 rounded-2 border-0" placeholder="Repassword" id="repassInput">
+                <div id="warningRepass" class="p-4 my-3 bg-danger-subtle text-danger-emphasis rounded-2 w-100 text-center d-none"></div>
+            </div>
+
+            <div class=" w-100 d-flex align-items-center justify-content-center py-4 mx-auto ">
+                <button class="px-2 py-1  rounded-2 bg-transparent border-danger text-danger-emphasis" id="contactSubmit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+<!-- details Sample-->
+    <div class="container py-5 d-none" id="detailsScreen">
+        <div class="row text-white" id="mainDetails">
+            <div class="col-md-4" id="detailsImg">
+                
+            </div>
+            <div class="col-md-8">
+                <h2 >Instructions</h2>
+                <p id="detailsInstruction">Lorem ipsum dolor sit amet.</p>
+                <h3>Area : 
+                    <span id="detailsArea">Turkish</span>
+                </h3>
+                <h3>Category : 
+                    <span id="detailsCat">Side</span>
+                </h3>
+                <div class="pb-3">
+                    <h3 class="py-2">Recipes : </h3> 
+                    <div class="px-2" id="ingred"></div>
+                </div>
+                <div>
+                    <h3 class="py-2">Tags : </h3> 
+                    <div class="ps-2" id="detailsTag">
+                    </div>
+                </div>
+                <div class="py-4 my-1" id="detailsBtn">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!-- spinner -->
+    <div id="spinner" class="load-spin position-fixed top-0 start-0 end-0 bottom-0 z-3 w-100 h-100 d-flex align-items-center justify-content-center d-none">
+        <span class="loader"></span>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.3.slim.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
